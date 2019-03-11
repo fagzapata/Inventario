@@ -59,7 +59,7 @@ if(!$product){
       <div class="panel panel-default">
         <div class="panel-heading">
           <strong>
-            <span class="glyphicon glyphicon-th"></span>
+            <span class="fas fa-edit"></span>
             <span>Editar producto</span>
          </strong>
         </div>
@@ -104,7 +104,7 @@ if(!$product){
                     <label for="qty">Cantidad</label>
                     <div class="input-group">
                       <span class="input-group-addon">
-                       <i class="glyphicon glyphicon-shopping-cart"></i>
+                       <i class="fas fa-shopping-cart"></i>
                       </span>
                       <input type="number" class="form-control" name="product-quantity" value="<?php echo remove_junk($product['quantity']); ?>">
                    </div>
@@ -115,7 +115,7 @@ if(!$product){
                     <label for="qty">Precio de compra</label>
                     <div class="input-group">
                       <span class="input-group-addon">
-                        <i class="glyphicon glyphicon-usd"></i>
+                        <i class="fas fa-dollar-sign"></i>
                       </span>
                       <input type="number" class="form-control" name="buying-price" value="<?php echo remove_junk($product['buy_price']);?>">
                       <span class="input-group-addon">.00</span>
@@ -127,7 +127,7 @@ if(!$product){
                      <label for="qty">Precio de venta</label>
                      <div class="input-group">
                        <span class="input-group-addon">
-                         <i class="glyphicon glyphicon-usd"></i>
+                         <i class="fas fa-dollar-sign"></i>
                        </span>
                        <input type="number" class="form-control" name="saleing-price" value="<?php echo remove_junk($product['sale_price']);?>">
                        <span class="input-group-addon">.00</span>

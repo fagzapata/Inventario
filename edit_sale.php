@@ -54,7 +54,7 @@ if(!$sale){
   <div class="panel">
     <div class="panel-heading clearfix">
       <strong>
-        <span class="glyphicon glyphicon-th"></span>
+        <span class="fas fa-th"></span>
         <span>All Sales</span>
      </strong>
      <div class="pull-right">

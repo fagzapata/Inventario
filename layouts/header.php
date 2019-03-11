@@ -9,21 +9,24 @@
            echo ucfirst($user['name']);
             else echo "Sistema simple de inventario";?>
     </title>
-	
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker3.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" href="libs/css/main.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/solid.css" integrity="sha384-r/k8YTFqmlOaqRkZuSiE9trsrDXkh07mRaoGBMoDcmA58OHILZPsk29i2BsFng1B" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/fontawesome.css" integrity="sha384-4aon80D8rXCGx9ayDt85LbyUHeMWd3UiBaWliBlJ53yzm9hqN21A+o1pqoyK04h+" crossorigin="anonymous">
+    
   </head>
   <body>
   <?php  if ($session->isUserLoggedIn(true)): ?>
-    <header id="header">
-      <div class="logo pull-left"> INVENTARIO - FABIAN </div>
+  <header id="header">
+      <div class="logo pull-left"> INVENTARIO </div>
       <div class="header-content">
       <div class="header-date pull-left">
-        <strong><?php echo date("d/m/Y  g:i a");?></strong>
+        <strong><?php echo date("d / M / Y ");?></strong>
       </div>
-      <div class="pull-right clearfix">
-        <ul class="info-menu list-inline list-unstyled">
+      <div class="pull-right">
+        <ul class="info-menu list-inline-item list-unstyled">
           <li class="profile">
             <a href="#" data-toggle="dropdown" class="toggle" aria-expanded="false">
               <img src="uploads/users/<?php echo $user['image'];?>" alt="user-image" class="img-circle img-inline">
@@ -32,19 +35,19 @@
             <ul class="dropdown-menu">
               <li>
                   <a href="profile.php?id=<?php echo (int)$user['id'];?>">
-                      <i class="glyphicon glyphicon-user"></i>
+                      <i class="fas fa-user"></i>
                       Perfil
                   </a>
               </li>
              <li>
                  <a href="edit_account.php" title="edit account">
-                     <i class="glyphicon glyphicon-cog"></i>
+                     <i class="fas fa-cog"></i>
                      Configuración
                  </a>
              </li>
              <li class="last">
                  <a href="logout.php">
-                     <i class="glyphicon glyphicon-off"></i>
+                     <i class="fas fa-sign-out-alt"></i>
                      Salir
                  </a>
              </li>
@@ -54,6 +57,7 @@
       </div>
      </div>
     </header>
+    
     <div class="sidebar">
       <?php if($user['user_level'] === '1'): ?>
         <!-- admin menu -->

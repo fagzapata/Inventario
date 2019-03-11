@@ -15,7 +15,7 @@
     <div class="panel panel-default">
     <div class="panel-heading clearfix">
       <strong>
-        <span class="glyphicon glyphicon-th"></span>
+        <span class="fas fa-th"></span>
         <span>Grupos</span>
      </strong>
        <a href="add_group.php" class="btn btn-info pull-right btn-sm"> Agregar grupo</a>
@@ -49,10 +49,10 @@
            <td class="text-center">
              <div class="btn-group">
                 <a href="edit_group.php?id=<?php echo (int)$a_group['id'];?>" class="btn btn-xs btn-warning" data-toggle="tooltip" title="Editar">
-                  <i class="glyphicon glyphicon-pencil"></i>
+                  <i class="fas fa-edit fa-2x"></i>
                </a>
                 <a href="delete_group.php?id=<?php echo (int)$a_group['id'];?>" class="btn btn-xs btn-danger" data-toggle="tooltip" title="Eliminar">
-                  <i class="glyphicon glyphicon-remove"></i>
+                  <i class="fas fa-trash fa-2x"></i>
                 </a>
                 </div>
            </td>

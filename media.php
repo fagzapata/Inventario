@@ -28,7 +28,7 @@
       <div class="col-md-12">
         <div class="panel panel-default">
           <div class="panel-heading clearfix">
-            <span class="glyphicon glyphicon-camera"></span>
+            <span class="fas fa-camera fa-2x"></span>
             <span>Lista de imagenes</span>
             <div class="pull-right">
               <form class="form-inline" action="media.php" method="POST" enctype="multipart/form-data">
@@ -70,7 +70,7 @@
                 </td>
                 <td class="text-center">
                   <a href="delete_media.php?id=<?php echo (int) $media_file['id'];?>" class="btn btn-danger btn-xs"  title="Eliminar">
-                    <span class="glyphicon glyphicon-trash"></span>
+                    <span class="fas fa-trash fa-2x"></span>
                   </a>
                 </td>
                </tr>

@@ -17,7 +17,7 @@
     <div class="panel panel-default">
       <div class="panel-heading clearfix">
         <strong>
-          <span class="glyphicon glyphicon-th"></span>
+          <span class="fas fa-th"></span>
           <span>Usuarios</span>
        </strong>
          <a href="add_user.php" class="btn btn-info pull-right">Agregar usuario</a>
@@ -53,10 +53,10 @@
            <td class="text-center">
              <div class="btn-group">
                 <a href="edit_user.php?id=<?php echo (int)$a_user['id'];?>" class="btn btn-xs btn-warning" data-toggle="tooltip" title="Editar">
-                  <i class="glyphicon glyphicon-pencil"></i>
+                  <i class="fas fa-edit fa-2x"></i>
                </a>
                 <a href="delete_user.php?id=<?php echo (int)$a_user['id'];?>" class="btn btn-xs btn-danger" data-toggle="tooltip" title="Eliminar">
-                  <i class="glyphicon glyphicon-remove"></i>
+                  <i class="fas fa-trash fa-2x"></i>
                 </a>
                 </div>
            </td>

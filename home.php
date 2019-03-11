@@ -1,7 +1,7 @@
 <?php
-  $page_title = 'Home Page';
+  $page_title = 'Pagina principal';
   require_once('includes/load.php');
-  if (!$session->isUserLoggedIn(true)) { redirect('index.php', false);}
+  if (!$session->isUserLoggedIn(true)) { redirect('index.html', false);}
 ?>
 <?php include_once('layouts/header.php'); ?>
 <div class="row">

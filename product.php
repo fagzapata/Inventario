@@ -51,10 +51,10 @@
                 <td class="text-center">
                   <div class="btn-group">
                     <a href="edit_product.php?id=<?php echo (int)$product['id'];?>" class="btn btn-info btn-xs"  title="Editar" data-toggle="tooltip">
-                      <span class="glyphicon glyphicon-edit"></span>
+                      <span class="fas fa-edit fa-2x"></span>
                     </a>
                      <a href="delete_product.php?id=<?php echo (int)$product['id'];?>" class="btn btn-danger btn-xs"  title="Eliminar" data-toggle="tooltip">
-                      <span class="glyphicon glyphicon-trash"></span>
+                      <span class="fas fa-trash fa-2x"></span>
                     </a>
                   </div>
                 </td>

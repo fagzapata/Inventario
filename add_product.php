@@ -54,7 +54,7 @@
       <div class="panel panel-default">
         <div class="panel-heading">
           <strong>
-            <span class="glyphicon glyphicon-th"></span>
+            <span class="fas fa-th-large"></span>
             <span>Agregar producto</span>
          </strong>
         </div>
@@ -64,7 +64,7 @@
               <div class="form-group">
                 <div class="input-group">
                   <span class="input-group-addon">
-                   <i class="glyphicon glyphicon-th-large"></i>
+                   <i class="fas fa-pen"></i>
                   </span>
                   <input type="text" class="form-control" name="product-title" placeholder="Descripción">
                </div>
@@ -97,7 +97,7 @@
                  <div class="col-md-4">
                    <div class="input-group">
                      <span class="input-group-addon">
-                      <i class="glyphicon glyphicon-shopping-cart"></i>
+                      <i class="fas fa-shopping-cart"></i>
                      </span>
                      <input type="number" class="form-control" name="product-quantity" placeholder="Cantidad">
                   </div>
@@ -105,7 +105,7 @@
                  <div class="col-md-4">
                    <div class="input-group">
                      <span class="input-group-addon">
-                       <i class="glyphicon glyphicon-usd"></i>
+                       <i class="fas fa-dollar-sign"></i>
                      </span>
                      <input type="number" class="form-control" name="buying-price" placeholder="Precio de compra">
                      <span class="input-group-addon">.00</span>
@@ -114,7 +114,7 @@
                   <div class="col-md-4">
                     <div class="input-group">
                       <span class="input-group-addon">
-                        <i class="glyphicon glyphicon-usd"></i>
+                        <i class="fas fa-dollar-sign"></i>
                       </span>
                       <input type="number" class="form-control" name="saleing-price" placeholder="Precio de venta">
                       <span class="input-group-addon">.00</span>

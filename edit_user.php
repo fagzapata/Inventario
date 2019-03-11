@@ -26,7 +26,7 @@
             $sql = "UPDATE users SET name ='{$name}', username ='{$username}',user_level='{$level}',status='{$status}' WHERE id='{$db->escape($id)}'";
          $result = $db->query($sql);
           if($result && $db->affected_rows() === 1){
-            $session->msg('s',"Acount Updated ");
+            $session->msg('s',"Cuenta perfectamente actualizada ");
             redirect('edit_user.php?id='.(int)$e_user['id'], false);
           } else {
             $session->msg('d',' Lo siento no se actualizó los datos.');
@@ -70,7 +70,7 @@ if(isset($_POST['update-pass'])) {
      <div class="panel panel-default">
        <div class="panel-heading">
         <strong>
-          <span class="glyphicon glyphicon-th"></span>
+          <span class="fas fa-th"></span>
           Actualiza cuenta <?php echo remove_junk(ucwords($e_user['name'])); ?>
         </strong>
        </div>
@@ -111,7 +111,7 @@ if(isset($_POST['update-pass'])) {
     <div class="panel panel-default">
       <div class="panel-heading">
         <strong>
-          <span class="glyphicon glyphicon-th"></span>
+          <span class="fas fa-key"></span>
           Cambiar <?php echo remove_junk(ucwords($e_user['name'])); ?> contraseña
         </strong>
       </div>

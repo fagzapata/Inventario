@@ -43,42 +43,46 @@
   }
 ?>
 <?php include_once('layouts/header.php'); ?>
-<div class="row">
+<div class="">
+  <div class="wrapper">
   <div class="col-md-12">
     <?php echo display_msg($msg); ?>
   </div>
   <div class="col-md-6">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <div class="panel-heading clearfix">
-            <span class="glyphicon glyphicon-camera"></span>
-            <span>Cambiar mi foto</span>
-          </div>
-        </div>
-        <div class="panel-body">
-          <div class="row">
-            <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading clearfix">
+        <span class="fas fa-camera fa-2x"></span>
+        <span>Cambiar foto de perfil</span>
+      </div>
+      <div class="panel-body">
+      <div class="text-center col-md-4">
                 <img class="img-circle img-size-2" src="uploads/users/<?php echo $user['image'];?>" alt="">
             </div>
-            <div class="col-md-8">
-              <form class="form" action="edit_account.php" method="POST" enctype="multipart/form-data">
-              <div class="form-group">
-                <input type="file" name="file_upload" multiple="multiple" class="btn btn-default btn-file"/>
-              </div>
-              <div class="form-group">
+          <div class="container">
+          <div class="row wrapper">
+            <div class="col-md-3">
+            <form class="form" action="edit_account.php" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                  <input class="form-control btn btn-default" type="file" name="file_upload" multiple="multiple">
+            </div>
+            <div class="form-group">
                 <input type="hidden" name="user_id" value="<?php echo $user['id'];?>">
                  <button type="submit" name="submit" class="btn btn-warning">Cambiar</button>
               </div>
-             </form>
+        </form>
             </div>
           </div>
-        </div>
+          </div>
       </div>
+    </div>
   </div>
+  </div>
+</div>
+  <!--2-->
   <div class="col-md-6">
     <div class="panel panel-default">
       <div class="panel-heading clearfix">
-        <span class="glyphicon glyphicon-edit"></span>
+        <span class="fas fa-edit fa-2x"></span>
         <span>Editar mi cuenta</span>
       </div>
       <div class="panel-body">
@@ -98,6 +102,7 @@
         </form>
       </div>
     </div>
+  </div>
   </div>
 </div>
 

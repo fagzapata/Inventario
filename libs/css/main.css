@@ -7,9 +7,11 @@ body{
   height: 100%;
   width: 100%;
 }a{
-  color #777;
+  color: #777;
   text-decoration: none;
-}.padding-top{
+}
+
+.padding-top{
   padding-top: 20px;
 }.login-page{
   width: 350px;
@@ -26,6 +28,7 @@ body{
 }.page{
   position: relative;
   display: block;
+  background: transparent;
   top: 50px;
   left: 0;
   padding: 35px 15px 20px 270px;
@@ -82,7 +85,7 @@ body{
   z-index: 99;
   top: 0;
   left: 0;
-  background-color: #fff;
+  background-color:#fff;
   width: 100%;
   height: 65px;
   line-height: 65px;
@@ -90,14 +93,14 @@ body{
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
 } header > .logo {
-    color: #fff;
+    color: rgb(0, 0, 0);
     text-align: center;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
     display: inline-block;
     width: 250px;
-     background-color: #16a085;
+     background-color: #ffffff;
 }.header-date{
   color: #9b9b9b;
   margin-left: 20px;
@@ -113,13 +116,12 @@ body{
   text-decoration: none;
   text-align: center;
   font-size: 14px;
-  color: rgba(150, 150, 158, 1.0);
   position: relative;
   padding: 10px 10px 10px 0;
   margin: 0;
-  background: #f9f9f9;
   border-radius: 30px;
-}.info-menu li.profile a img{
+}
+.info-menu li.profile a img{
   width: 30px;
   height: 30px;
 }.dropdown-menu{
@@ -187,7 +189,7 @@ body{
   letter-spacing: 1.5px;
   text-shadow: 0 1px rgba(0,0,0, 1);
 }.sidebar ul li a i{
-  color: #aeb2b7;
+  color: #eaedf1;
   padding: 15px 22px;
   text-align: center;
 }ul.submenu{

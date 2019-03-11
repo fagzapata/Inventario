@@ -42,7 +42,7 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <strong>
-          <span class="glyphicon glyphicon-th"></span>
+          <span class="fas fa-user"></span>
           <span>Agregar usuario</span>
        </strong>
       </div>

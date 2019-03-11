@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.7.4
+-- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-06-2017 a las 07:12:59
--- Versión del servidor: 10.1.19-MariaDB
--- Versión de PHP: 7.0.13
+-- Tiempo de generación: 11-03-2019 a las 18:21:16
+-- Versión del servidor: 10.1.30-MariaDB
+-- Versión de PHP: 7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `oswa_inv`
+-- Base de datos: `aplicacion`
 --
 
 -- --------------------------------------------------------
@@ -36,7 +38,7 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `name`) VALUES
-(1, 'Repuestos');
+(1, 'PLACAS DE INOXIDABLE');
 
 -- --------------------------------------------------------
 
@@ -55,7 +57,7 @@ CREATE TABLE `media` (
 --
 
 INSERT INTO `media` (`id`, `file_name`, `file_type`) VALUES
-(1, 'filter.jpg', 'image/jpeg');
+(1, 'Android_OREO_logo_2.png', 'image/png');
 
 -- --------------------------------------------------------
 
@@ -79,7 +81,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `quantity`, `buy_price`, `sale_price`, `categorie_id`, `media_id`, `date`) VALUES
-(1, 'Filtro de gasolina', '100', '5.00', '10.00', 1, 1, '2017-06-16 07:03:16');
+(1, 'PLACA DE INOXIDABLE', '49', '170.00', '200.00', 1, 1, '2019-03-08 00:20:21');
 
 -- --------------------------------------------------------
 
@@ -94,6 +96,14 @@ CREATE TABLE `sales` (
   `price` decimal(25,2) NOT NULL,
   `date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `sales`
+--
+
+INSERT INTO `sales` (`id`, `product_id`, `qty`, `price`, `date`) VALUES
+(1, 1, 1, '200.00', '2019-03-08'),
+(2, 1, 50, '10000.00', '2019-03-08');
 
 -- --------------------------------------------------------
 
@@ -117,9 +127,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `password`, `user_level`, `image`, `status`, `last_login`) VALUES
-(1, 'Admin Users', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 1, 'pzg9wa7o1.jpg', 1, '2017-06-16 07:11:11'),
-(2, 'Special User', 'special', 'ba36b97a41e7faf742ab09bf88405ac04f99599a', 2, 'no_image.jpg', 1, '2017-06-16 07:11:26'),
-(3, 'Default User', 'user', '12dea96fec20593566ab75692c9949596833adc9', 3, 'no_image.jpg', 1, '2017-06-16 07:11:03');
+(1, 'Administrador oficial', 'Admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 1, 'udsviqy31.jpg', 1, '2019-03-11 17:09:13'),
+(5, 'Fabian Gallegos', 'Fabian', '408d890298c4963dfaac2e8b508552b9e1ee8048', 3, 'kaycah55.png', 1, '2019-03-11 17:02:56'),
+(6, 'Gilberto Huerta Ramos', 'ghuerta', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 1, 'no_image.jpg', 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -201,31 +211,37 @@ ALTER TABLE `user_groups`
 --
 ALTER TABLE `categories`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT de la tabla `media`
 --
 ALTER TABLE `media`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT de la tabla `sales`
 --
 ALTER TABLE `sales`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT de la tabla `user_groups`
 --
 ALTER TABLE `user_groups`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- Restricciones para tablas volcadas
 --
@@ -247,6 +263,7 @@ ALTER TABLE `sales`
 --
 ALTER TABLE `users`
   ADD CONSTRAINT `FK_user` FOREIGN KEY (`user_level`) REFERENCES `user_groups` (`group_level`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

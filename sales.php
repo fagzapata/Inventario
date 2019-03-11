@@ -17,7 +17,7 @@ $sales = find_all_sale();
       <div class="panel panel-default">
         <div class="panel-heading clearfix">
           <strong>
-            <span class="glyphicon glyphicon-th"></span>
+            <span class="fas fa-th"></span>
             <span>Todas la ventas</span>
           </strong>
           <div class="pull-right">
@@ -47,10 +47,10 @@ $sales = find_all_sale();
                <td class="text-center">
                   <div class="btn-group">
                      <a href="edit_sale.php?id=<?php echo (int)$sale['id'];?>" class="btn btn-warning btn-xs"  title="Edit" data-toggle="tooltip">
-                       <span class="glyphicon glyphicon-edit"></span>
+                       <span class="fas fa-edit fa-2x"></span>
                      </a>
                      <a href="delete_sale.php?id=<?php echo (int)$sale['id'];?>" class="btn btn-danger btn-xs"  title="Delete" data-toggle="tooltip">
-                       <span class="glyphicon glyphicon-trash"></span>
+                       <span class="fas fa-trash fa-2x"></span>
                      </a>
                   </div>
                </td>

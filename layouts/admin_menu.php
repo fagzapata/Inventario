@@ -1,13 +1,13 @@
 <ul>
   <li>
     <a href="admin.php">
-      <i class="glyphicon glyphicon-home"></i>
+      <i class="fas fa-home fa-2x"></i>
       <span>Panel de control</span>
     </a>
   </li>
   <li>
     <a href="#" class="submenu-toggle">
-      <i class="glyphicon glyphicon-user"></i>
+      <i class="fas fa-user fa-2x"></i>
       <span>Accesos</span>
     </a>
     <ul class="nav submenu">
@@ -17,13 +17,13 @@
   </li>
   <li>
     <a href="categorie.php" >
-      <i class="glyphicon glyphicon-indent-left"></i>
+      <i class="fas fa-indent"></i>
       <span>Categorías</span>
     </a>
   </li>
   <li>
     <a href="#" class="submenu-toggle">
-      <i class="glyphicon glyphicon-th-large"></i>
+      <i class="fas fa-th-large"></i>
       <span>Productos</span>
     </a>
     <ul class="nav submenu">
@@ -33,13 +33,13 @@
   </li>
   <li>
     <a href="media.php" >
-      <i class="glyphicon glyphicon-picture"></i>
+      <i class="fas fa-image"></i>
       <span>Media</span>
     </a>
   </li>
   <li>
     <a href="#" class="submenu-toggle">
-      <i class="glyphicon glyphicon-th-list"></i>
+      <i class="fas fa-th-list"></i>
        <span>Ventas</span>
       </a>
       <ul class="nav submenu">
@@ -49,7 +49,7 @@
   </li>
   <li>
     <a href="#" class="submenu-toggle">
-      <i class="glyphicon glyphicon-signal"></i>
+      <i class="fas fa-signal"></i>
        <span>Reporte de ventas</span>
       </a>
       <ul class="nav submenu">

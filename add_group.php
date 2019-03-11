@@ -64,7 +64,7 @@
             </select>
         </div>
         <div class="form-group clearfix">
-                <button type="submit" name="add" class="btn btn-info">Guardar</button>
+                <button type="submit" name="add" class="btn btn-success"><span><i class="fas fa-user"></i>Guardar</span></button>
         </div>
     </form>
 </div>

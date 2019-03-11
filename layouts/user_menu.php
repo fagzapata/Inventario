@@ -1,13 +1,13 @@
 <ul>
-  <li>
-    <a href="home.php">
-      <i class="glyphicon glyphicon-home"></i>
-      <span>Panel de control</span>
+<li>
+    <a href="user.php">
+      <i class="fas fa-home fa-2x"></i>
+      <span>Inicio</span>
     </a>
   </li>
   <li>
     <a href="#" class="submenu-toggle">
-      <i class="glyphicon glyphicon-th-list"></i>
+      <i class="fas fa-th-list"></i>
        <span>Ventas</span>
       </a>
       <ul class="nav submenu">
@@ -17,7 +17,7 @@
   </li>
   <li>
     <a href="#" class="submenu-toggle">
-      <i class="glyphicon glyphicon-signal"></i>
+      <i class="fas fa-signal"></i>
        <span>Reporte de ventas</span>
       </a>
       <ul class="nav submenu">

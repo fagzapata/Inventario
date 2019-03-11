@@ -1,7 +1,7 @@
 <?php
-  $page_title = 'Pagina del administrador';
+  $page_title = 'Admin página de inicio';
   require_once('includes/load.php');
-   page_require_level(2);
+   page_require_level(3);
 ?>
 <?php
  $c_categorie     = count_by_id('categories');
@@ -20,52 +20,22 @@
    </div>
 </div>
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-6">
        <div class="panel panel-box clearfix">
-         <a href="users.php">
-         <div class="panel-icon pull-left bg-green">
-          <i class="fas fa-user"></i>
-        </div>
-         </a>
-        <div class="panel-value pull-right">
-          <h2 class="margin-top"> <?php  echo $c_user['total']; ?> </h2>
-          <p class="text-muted">Usuarios</p>
-        </div>
-       </div>
-    </div>
-    <div class="col-md-3">
-       <div class="panel panel-box clearfix">
-         <a href="categorie.php">
-         <div class="panel-icon pull-left bg-red">
-          <i class="fas fa-th-list"></i>
-        </div>
-         </a>
-        <div class="panel-value pull-right">
-          <h2 class="margin-top"> <?php  echo $c_categorie['total']; ?> </h2>
-          <p class="text-muted">Categorías</p>
-        </div>
-       </div>
-    </div>
-    <div class="col-md-3">
-       <div class="panel panel-box clearfix">
-         <a href="product.php">
          <div class="panel-icon pull-left bg-blue">
           <i class="fas fa-shopping-cart"></i>
         </div>
-         </a>
         <div class="panel-value pull-right">
           <h2 class="margin-top"> <?php  echo $c_product['total']; ?> </h2>
           <p class="text-muted">Productos</p>
         </div>
        </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-6">
        <div class="panel panel-box clearfix">
-         <a href="sales.php">
          <div class="panel-icon pull-left bg-yellow">
           <i class="fas fa-dollar-sign"></i>
         </div>
-         </a>
         <div class="panel-value pull-right">
           <h2 class="margin-top"> <?php  echo $c_sale['total']; ?></h2>
           <p class="text-muted">Ventas</p>
@@ -75,7 +45,7 @@
 </div>
 
   <div class="row">
-   <div class="col-md-4">
+   <div class="col-md-6">
      <div class="panel panel-default">
        <div class="panel-heading">
          <strong>
@@ -105,7 +75,7 @@
        </div>
      </div>
    </div>
-   <div class="col-md-4">
+   <div class="col-md-6">
       <div class="panel panel-default">
         <div class="panel-heading">
           <strong>
@@ -142,39 +112,6 @@
     </div>
    </div>
   </div>
-  <div class="col-md-4">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <strong>
-          <span class="fas fa-cart-plus"></span>
-          <span>Añadidos recientemente</span>
-        </strong>
-      </div>
-      <div class="panel-body">
-
-        <div class="list-group">
-      <?php foreach ($recent_products as  $recent_product): ?>
-            <a class="list-group-item clearfix" href="edit_product.php?id=<?php echo    (int)$recent_product['id'];?>">
-                <h4 class="list-group-item-heading">
-                 <?php if($recent_product['media_id'] === '0'): ?>
-                    <img class="img-avatar img-circle" src="uploads/products/no_image.jpg" alt="">
-                  <?php else: ?>
-                  <img class="img-avatar img-circle" src="uploads/products/<?php echo $recent_product['image'];?>" alt="" />
-                <?php endif;?>
-                <?php echo remove_junk(first_character($recent_product['name']));?>
-                  <span class="label label-warning pull-right">
-                 $<?php echo (int)$recent_product['sale_price']; ?>
-                  </span>
-                </h4>
-                <span class="list-group-item-text pull-right">
-                <?php echo remove_junk(first_character($recent_product['categorie'])); ?>
-              </span>
-          </a>
-      <?php endforeach; ?>
-    </div>
-  </div>
- </div>
-</div>
  </div>
   <div class="row">
 

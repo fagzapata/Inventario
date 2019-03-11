@@ -38,7 +38,7 @@
       <div class="panel panel-default">
         <div class="panel-heading">
           <strong>
-            <span class="glyphicon glyphicon-th"></span>
+            <span class="fas fa-th"></span>
             <span>Agregar categoría</span>
          </strong>
         </div>
@@ -56,7 +56,7 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <strong>
-          <span class="glyphicon glyphicon-th"></span>
+          <span class="fas fa-th"></span>
           <span>Lista de categorías</span>
        </strong>
       </div>
@@ -77,10 +77,10 @@
                     <td class="text-center">
                       <div class="btn-group">
                         <a href="edit_categorie.php?id=<?php echo (int)$cat['id'];?>"  class="btn btn-xs btn-warning" data-toggle="tooltip" title="Editar">
-                          <span class="glyphicon glyphicon-edit"></span>
+                          <span class="fas fa-edit fa-2x"></span>
                         </a>
                         <a href="delete_categorie.php?id=<?php echo (int)$cat['id'];?>"  class="btn btn-xs btn-danger" data-toggle="tooltip" title="Eliminar">
-                          <span class="glyphicon glyphicon-trash"></span>
+                          <span class="fas fa-trash fa-2x"></span>
                         </a>
                       </div>
                     </td>
